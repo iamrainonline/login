@@ -7,9 +7,7 @@ const AuthContextProvider = (props) => {
   const [loggedIn, setLoggedIn] = useState(undefined);
 
   async function getLoggedIn() {
-    const loggedInRes = await axios.get(
-      "https://rain-jwt.herokuapp.com/auth/loggedIn"
-    );
+    const loggedInRes = await axios.get("/auth/loggedIn");
     setLoggedIn(loggedInRes.data);
   }
 

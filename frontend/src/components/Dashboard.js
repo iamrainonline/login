@@ -5,14 +5,14 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get("https://rain-jwt.herokuapp.com/customer/users").then((data) => {
+    axios.get("/customer/users").then((data) => {
       const newData = data.data;
       setUsers(newData);
     });
   }, []);
 
   const deleteName = (id) => {
-    axios.delete(`https://rain-jwt.herokuapp.com/customer/users/${id}`);
+    axios.delete(`/customer/users/${id}`);
     window.location.reload();
   };
 

@@ -20,7 +20,7 @@ const Login = () => {
         password,
       };
 
-      await axios.post("https://rain-jwt.herokuapp.com/auth/login", loginData);
+      await axios.post("/auth/login", loginData);
       await getLoggedIn();
 
       history.push("/dashboard");

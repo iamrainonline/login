@@ -9,7 +9,7 @@ const LogOutBtn = () => {
   const history = useHistory();
 
   const logOut = async () => {
-    await axios.get("https://rain-jwt.herokuapp.com/auth/logout");
+    await axios.get("/auth/logout");
     await getLoggedIn();
     history.push("/");
   };
